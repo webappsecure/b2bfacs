@@ -338,8 +338,18 @@ body {
         padding-top: 2px;
     }
     
-    .buttonBar {
-        margin-top: 7px;
+    .bottomContainer {
+        width: 320px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .remainingLabel {
+        margin: 10px 3px 3px 3px;
+        color: teal;
+        font-weight: bold;
+        width: 320px;
+        text-align: center;
     }
     button {
         margin: 3px;
