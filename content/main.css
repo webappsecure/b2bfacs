@@ -1,0 +1,295 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+}
+.parent {
+    display: grid;
+    grid-template-columns: repeat(8, 40px);
+    grid-template-rows: repeat(23, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    .pitcherSection {
+        font-weight: bold; 
+        color: red; 
+    }
+    .batterSection {
+        font-weight: bold; 
+        color: green; 
+    }
+    .sectionSide {
+        
+        border-left-style: solid; 
+        border-left-color: black; 
+        padding-left: 3px;
+    }
+    .rangeLeft {
+        border-left-style: solid; 
+        border-left-color: black; 
+        padding-left: 3px;
+        color: royalblue;  
+    }
+    .rangeRight {
+        border-right-style: solid; 
+        border-right-color: black; 
+        padding-right: 3px;
+        color: royalblue;  
+    }
+    .errorLeft {
+        border-left-style: solid; 
+        border-left-color: black; 
+        padding-left: 3px;
+        color: purple;  
+    }
+    .errorRight {
+        border-right-style: solid; 
+        border-right-color: black; 
+        padding-right: 3px;
+        color: purple;  
+    }
+    .jumpLabels
+    {
+        text-align: center;
+        color: orangered;
+    }
+    .stealLabels
+    {
+        text-align: center;
+        color: darkred;
+    }
+    .jumpValues {
+        text-align: center;
+        color: orangered;
+        border-bottom-style: solid;
+        border-bottom-color: black;
+    }
+    .stealValues {
+        text-align: center;
+        color: darkred;
+        border-bottom-style: solid;
+        border-bottom-color: black;
+    }
+
+    .sacLabel { 
+        grid-area: 1 / 3 / 2 / 4; 
+        background-color: yellow; 
+        padding-top: 2px; 
+    }
+    .sacValue { 
+        grid-area: 1 / 4 / 2 / 6; 
+        background-color: yellow; 
+        padding-top: 2px; 
+    }
+    .outLabel { 
+        grid-area: 1 / 6 / 2 / 8; 
+        background-color: darkkhaki; 
+        text-align: center; 
+        padding-top: 2px; 
+    }
+    .outValue { 
+        grid-area: 1 / 8 / 2 / 9; 
+        background-color: darkkhaki; 
+        text-align: center; 
+        padding-top: 2px; 
+    }
+    .pitcherSectionLabel { 
+        grid-area: 2 / 1 / 3 / 7; 
+        border-top-style: solid; 
+        border-top-color: black;         
+    }
+    .outfieldOutTypeValue { 
+        grid-area: 2 / 7 / 3 / 8; 
+        background-color: royalblue;
+        color: white;
+        border-style: solid; 
+        border-color: black; 
+        border-width: medium thin thin medium;
+        text-align: center;
+    }
+    .infieldOutTypeValue { 
+        grid-area: 2 / 8 / 3 / 9; 
+        background-color: cornflowerblue;
+        border-style: solid; 
+        border-color: black; 
+        border-width: medium medium thin thin;
+        text-align: center;
+    }
+    .outfieldOutLabel { 
+        grid-area: 3 / 7 / 4 / 8; 
+        color: royalblue;
+        text-align: center;
+        border-style: solid; 
+        border-color: black; 
+        border-width: thin thin medium medium;
+    }
+    .infieldOutLabel { 
+        grid-area: 3 / 8 / 4 / 9; 
+        color: royalblue;
+        text-align: center;
+        border-style: solid; 
+        border-color: black; 
+        border-width: thin medium medium thin;
+    }
+    .pitcherSectionSpacer { 
+        grid-area: 3 / 1 / 4 / 7; 
+        border-left-style: solid; 
+        border-left-color: black; 
+    }
+    .pitcherALabel { grid-area: 4 / 1 / 5 / 2; }
+    .pitcherAValue { grid-area: 4 / 2 / 5 / 7; }
+    .groundOutValue { 
+        grid-area: 4 / 7 / 5 / 9; 
+        text-align: center;        
+        border-style: none solid none solid;
+        border-color: black;
+        background-color: red;
+        color: white;
+    }
+    .pitcherBLabel { grid-area: 5 / 1 / 6 / 2; }
+    .pitcherBValue { grid-area: 5 / 2 / 6 / 7; }
+    .rangeLabel { 
+        grid-area: 5 / 7 / 6 / 9;
+        text-align: center;
+        color: royalblue; 
+        border-style: solid solid none solid;
+        border-color: black;
+    }
+    .pitcherCLabel { grid-area: 6 / 1 / 7 / 2; }
+    .pitcherCValue { grid-area: 6 / 2 / 7 / 7; }
+    .rangeALabel { grid-area: 6 / 7 / 7 / 8; }
+    .rangeAValue { grid-area: 6 / 8 / 7 / 9; }
+    .pitcherDLabel { grid-area: 7 / 1 / 8 / 2; }
+    .pitcherDValue { grid-area: 7 / 2 / 8 / 7; }
+    .rangeBLabel { grid-area: 7 / 7 / 8 / 8; }
+    .rangeBValue { grid-area: 7 / 8 / 8 / 9; }
+    .pitcherFLabel { grid-area: 8 / 1 / 9 / 2; }
+    .pitcherFValue { grid-area: 8 / 2 / 9 / 7; }
+    .rangeCLabel { grid-area: 8 / 7 / 9 / 8; }
+    .rangeCValue { grid-area: 8 / 8 / 9 / 9; }
+    .batterSectionLabel { 
+        grid-area: 9 / 1 / 10 / 7; 
+        border-top-style: solid; 
+        border-top-color: black; 
+    }
+    .batterSectionSpacer { 
+        grid-area: 10 / 1 / 11 / 7; 
+        border-left-style: solid; 
+        border-left-color: black; 
+    }
+    .rangeDLabel { grid-area: 9 / 7 / 10 / 8; }
+    .rangeDValue { grid-area: 9 / 8 / 10 / 9; }
+    .rangeFLabel { grid-area: 10 / 7 / 11 / 8; }
+    .rangeFValue { grid-area: 10 / 8 / 11 / 9; }
+    .batterAPlusLabel { grid-area: 11 / 1 / 12 / 2; }
+    .batterAPlusValue { grid-area: 11 / 2 / 12 / 7; }
+    .batterALabel { grid-area: 12 / 1 / 13 / 2; }
+    .batterAValue { grid-area: 12 / 2 / 13 / 7; }
+    .randomTop { 
+        grid-area: 11 / 7 / 12 / 9; 
+        text-align: center;
+        background-color: silver; 
+        border-style: solid solid none solid;
+        border-color: black;
+    }
+    .randomBottom { 
+        grid-area: 12 / 7 / 13 / 9;
+        text-align: center;
+        background-color: silver; 
+        border-style: none solid solid solid;
+        border-color: black; 
+    }
+    .batterBPlusLabel { grid-area: 13 / 1 / 14 / 2; }
+    .batterBPlusValue { grid-area: 13 / 2 / 14 / 7; }
+    .errorLabel { 
+        grid-area: 13 / 7 / 14 / 9; 
+        text-align: center;
+        color: purple; 
+        border-style: none solid none solid;
+        border-color: black;
+    }
+    .batterBLabel { grid-area: 14 / 1 / 15 / 2; }
+    .batterBValue { grid-area: 14 / 2 / 15 / 7; }
+    .errorALabel { grid-area: 14 / 7 / 15 / 8; }
+    .errorAValue { grid-area: 14 / 8 / 15 / 9; }
+    .batterCPlusLabel { grid-area: 15 / 1 / 16 / 2; }
+    .batterCPlusValue { grid-area: 15 / 2 / 16 / 7; }
+    .errorBLabel { grid-area: 15 / 7 / 16 / 8; }
+    .errorBValue { grid-area: 15 / 8 / 16 / 9; }
+    .batterCLabel { grid-area: 16 / 1 / 17 / 2; }
+    .batterCValue { grid-area: 16 / 2 / 17 / 7; }
+    .errorCLabel { grid-area: 16 / 7 / 17 / 8; }
+    .errorCValue { grid-area: 16 / 8 / 17 / 9; }
+    .batterDLabel { grid-area: 17 / 1 / 18 / 2; }
+    .batterDValue { grid-area: 17 / 2 / 18 / 7; }
+    .errorDLabel { grid-area: 17 / 7 / 18 / 8; }
+    .errorDValue { grid-area: 17 / 8 / 18 / 9; }
+    .batterFLabel { grid-area: 18 / 1 / 19 / 2; }
+    .batterFValue { grid-area: 18 / 2 / 19 / 7; }
+    .errorFLabel { grid-area: 18 / 7 / 19 / 8; }
+    .errorFValue { grid-area: 18 / 8 / 19 / 9; }
+    .jumpLabel { 
+        grid-area: 19 / 1 / 20 / 5; 
+        padding-left: 3px;
+        color: orangered; 
+        border-style: solid solid none solid;
+        border-color: black;
+    }
+    .stealLabel { 
+        grid-area: 19 / 5 / 20 / 9; 
+        padding-left: 3px;
+        color: darkred; 
+        border-style: solid solid none none;
+        border-color: black;
+    }
+    .jumpALabel { 
+        grid-area: 20 / 1 / 21 / 2; 
+        border-left-style: solid;
+        border-left-color: black;
+    }
+    .jumpBLabel { grid-area: 20 / 2 / 21 / 3; }
+    .jumpCLabel { grid-area: 20 / 3 / 21 / 4; }
+    .jumpDLabel { 
+        grid-area: 20 / 4 / 21 / 5; 
+        border-right-style: solid;
+        border-right-color: black;
+    }
+    .stealALabel { grid-area: 20 / 5 / 21 / 6; }
+    .stealBLabel { grid-area: 20 / 6 / 21 / 7; }
+    .stealCLabel { grid-area: 20 / 7 / 21 / 8; }
+    .stealDLabel { 
+        grid-area: 20 / 8 / 21 / 9; 
+        border-right-style: solid;
+        border-right-color: black;
+    }
+
+    .jumpAValue { 
+        grid-area: 21 / 1 / 22 / 2;
+        border-left-style: solid;
+        border-left-color: black; 
+    }
+    .jumpBValue { grid-area: 21 / 2 / 22 / 3; }
+    .jumpCValue { grid-area: 21 / 3 / 22 / 4; }
+    .jumpDValue { 
+        grid-area: 21 / 4 / 22 / 5; 
+        border-right-style: solid;
+        border-right-color: black;
+    }
+    .stealAValue { grid-area: 21 / 5 / 22 / 6; }
+    .stealBValue { grid-area: 21 / 6 / 22 / 7; }
+    .stealCValue { grid-area: 21 / 7 / 22 / 8; }
+    .stealDValue { 
+        grid-area: 21 / 8 / 22 / 9; 
+        border-right-style: solid;
+        border-right-color: black;
+    }
+
+
+    .div72 { grid-area: 22 / 1 / 23 / 3; }
+    .div73 { grid-area: 22 / 3 / 23 / 5; }
+    .div74 { grid-area: 23 / 1 / 24 / 3; }
+    .div75 { grid-area: 23 / 3 / 24 / 4; }
+    .div76 { grid-area: 23 / 4 / 24 / 5; }
+    .div77 { grid-area: 23 / 5 / 24 / 6; }
+    .div78 { grid-area: 23 / 6 / 24 / 7; }
+    .div79 { grid-area: 23 / 7 / 24 / 8; }
+    .div80 { grid-area: 23 / 8 / 24 / 9; }
