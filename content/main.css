@@ -284,12 +284,63 @@ body {
     }
 
 
-    .div72 { grid-area: 22 / 1 / 23 / 3; }
-    .div73 { grid-area: 22 / 3 / 23 / 5; }
-    .div74 { grid-area: 23 / 1 / 24 / 3; }
-    .div75 { grid-area: 23 / 3 / 24 / 4; }
-    .div76 { grid-area: 23 / 4 / 24 / 5; }
-    .div77 { grid-area: 23 / 5 / 24 / 6; }
-    .div78 { grid-area: 23 / 6 / 24 / 7; }
-    .div79 { grid-area: 23 / 7 / 24 / 8; }
-    .div80 { grid-area: 23 / 8 / 24 / 9; }
+    .injuryLabel { 
+        grid-area: 22 / 1 / 23 / 3; 
+        color: brown;
+        padding-left:4px;
+        padding-top: 2px;
+    }
+    .durationLabel { 
+        grid-area: 22 / 3 / 23 / 5; 
+        color: dimgray;
+        padding-left:2px;
+        padding-top: 2px;
+    }
+    .injuryValue { 
+        grid-area: 23 / 1 / 24 / 3; 
+        text-align: center;
+        color: white;
+        background-color: brown;
+        padding-top: 2px;
+    }
+    .durationALabel { 
+        grid-area: 23 / 3 / 24 / 4; 
+        text-align: center;
+        background-color: silver;
+        padding-top: 2px;
+    }
+    .durationAValue { 
+        grid-area: 23 / 4 / 24 / 5; 
+        text-align: center;
+        background-color: silver;
+        padding-top: 2px;
+    }
+    .durationBLabel { 
+        grid-area: 23 / 5 / 24 / 6; 
+        text-align: center;
+        padding-top: 2px;
+    }
+    .durationBValue { 
+        grid-area: 23 / 6 / 24 / 7; 
+        text-align: center;
+        padding-top: 2px;
+    }
+    .durationCLabel { 
+        grid-area: 23 / 7 / 24 / 8; 
+        text-align: center;
+        background-color: silver;
+        padding-top: 2px;
+    }
+    .durationCValue { 
+        grid-area: 23 / 8 / 24 / 9; 
+        text-align: center;
+        background-color: silver;
+        padding-top: 2px;
+    }
+    
+    .buttonBar {
+        margin-top: 7px;
+    }
+    button {
+        margin: 3px;
+    }
