@@ -358,4 +358,7 @@ body {
     }
     button {
         margin: 3px;
+        width: 90px;
+        height: 25px;
+        font-size: larger;
     }
