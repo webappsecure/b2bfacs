@@ -1,115 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--<link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
     <link rel="stylesheet" href="content/main.css">
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>    
+    <!--<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>--> 
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <div class="parent">
-        <div class="sacLabel">SAC</div>
-        <div class="sacValue">SAC (3B)</div>
-        <div class="outLabel">OUT</div>
-        <div class="outValue">CF</div>
-        <div class="pitcherSection sectionSide pitcherSectionLabel">Pitcher:</div>
-        <div class="pitcherSectionSpacer"></div>
-        <div class="outfieldOutTypeValue">S</div>
-        <div class="infieldOutTypeValue">FC</div>
-        <div class="outfieldOutLabel">OF</div>
-        <div class="infieldOutLabel">IF</div>
-        <div class="pitcherSection sectionSide pitcherALabel">A:</div>
-        <div class="pitcherSection pitcherAValue">STRIKEOUT (A,B,C)</div>
-        <div class="groundOutValue">FC</div>
-        <div class="pitcherSection sectionSide pitcherBLabel">B:</div>
-        <div class="pitcherSection pitcherBValue">STRIKEOUT</div>
-        <div class="rangeLabel">RANGE:</div>
-        <div class="pitcherSection sectionSide pitcherCLabel">C:</div>
-        <div class="pitcherSection pitcherCValue">SWING</div>
-        <div class="rangeLeft rangeALabel">A:</div>
-        <div class="rangeRight rangeAValue">OUT</div>
-        <div class="pitcherSection sectionSide pitcherDLabel">D:</div>
-        <div class="pitcherSection pitcherDValue">SWING</div>
-        <div class="rangeLeft rangeBLabel">B:</div>
-        <div class="rangeRight rangeBValue">OUT</div>
-        <div class="pitcherSection sectionSide pitcherFLabel">F:</div>
-        <div class="pitcherSection pitcherFValue">SWING</div>
-        <div class="rangeLeft rangeCLabel">C:</div>
-        <div class="rangeRight rangeCValue">OUT</div>
-        <div class="batterSection sectionSide batterSectionLabel">Batter:</div>
-        <div class="batterSectionSpacer"></div>
-        <div class="rangeLeft rangeDLabel">D:</div>
-        <div class="rangeRight rangeDValue">OUT</div>
-        <div class="rangeLeft rangeFLabel">F:</div>
-        <div class="rangeRight rangeFValue">OUT</div>
-        <div class="batterSection sectionSide batterAPlusLabel">A+:</div>
-        <div class="batterSection batterAPlusValue">STRIKEOUT (D,F)</div>
-        <div class="batterSection sectionSide batterALabel">A:</div>
-        <div class="batterSection batterAValue">HR (C) / DOUBLE ***</div>
-        <div class="randomTop">Random</div>
-        <div class="randomBottom">33</div>
-        <div class="batterSection sectionSide batterBPlusLabel">B+:</div>
-        <div class="batterSection batterBPlusValue">HR (C) / DFLY (RF)</div>
-        <div class="errorLabel">ERROR:</div>
-        <div class="batterSection sectionSide batterBLabel">B:</div>
-        <div class="batterSection batterBValue">STRIKEOUT (B,C,D,F)</div>
-        <div class="errorLeft errorALabel">A:</div>
-        <div class="errorRight errorAValue">OUT</div>
-        <div class="batterSection sectionSide batterCPlusLabel">C+:</div>
-        <div class="batterSection batterCPlusValue">HR (B+) / DOUBLE **</div>
-        <div class="errorLeft errorBLabel">B:</div>
-        <div class="errorRight errorBValue">OUT</div>
-        <div class="batterSection sectionSide batterCLabel">C:</div>
-        <div class="batterSection batterCValue">HR (B+) / DFLY (LF)</div>
-        <div class="errorLeft errorCLabel">C:</div>
-        <div class="errorRight errorCValue">OUT</div>
-        <div class="batterSection sectionSide batterDLabel">D:</div>
-        <div class="batterSection batterDValue">GROUND OUT (2B)</div>
-        <div class="errorLeft errorDLabel">D:</div>
-        <div class="errorRight errorDValue">OUT</div>
-        <div class="batterSection sectionSide batterFLabel">F:</div>
-        <div class="batterSection batterFValue">HR (A+) / DFLY (CF)</div>
-        <div class="errorLeft errorFLabel">F:</div>
-        <div class="errorRight errorFValue">OUT</div>
-        <div class="jumpLabel">JUMP:</div>
-        <div class="stealLabel">STEAL:</div>
-        <div class="jumpLabels jumpALabel">A:</div>
-        <div class="jumpLabels jumpBLabel">B:</div>
-        <div class="jumpLabels jumpCLabel">C:</div>
-        <div class="jumpLabels jumpDLabel">D:</div>
-        <div class="stealLabels stealALabel">A:</div>
-        <div class="stealLabels stealBLabel">B:</div>
-        <div class="stealLabels stealCLabel">C:</div>
-        <div class="stealLabels stealDLabel">D:</div>
-        <div class="jumpValues jumpAValue">GO</div>
-        <div class="jumpValues jumpBValue">GO</div>
-        <div class="jumpValues jumpCValue">GO</div>
-        <div class="jumpValues jumpDValue">X</div>
-        <div class="stealValues stealAValue">SB</div>
-        <div class="stealValues stealBValue">SB</div>
-        <div class="stealValues stealCValue">CS</div>
-        <div class="stealValues stealDValue">SB</div>
+    <div id="app">
+        <div class="parent" data-bind="using: currentCard">
+            <div class="cardNumLabel">{{currentCard.CardNumber}}</div>
+            <div class="sacLabel">SAC</div>
+            <div class="sacValue">{{currentCard.Sacrifice}}</div>
+            <div class="outLabel">OUT</div>
+            <div class="outValue">{{currentCard.OutType}}</div>
+            <div class="pitcherSection sectionSide pitcherSectionLabel">Pitcher:</div>
+            <div class="pitcherSectionSpacer"></div>
+            <div class="outfieldOutTypeValue">{{currentCard.OutfieldOutType}}</div>
+            <div class="infieldOutTypeValue">{{currentCard.InfieldOutType}}</div>
+            <div class="outfieldOutLabel">OF</div>
+            <div class="infieldOutLabel">IF</div>
+            <div class="pitcherSection sectionSide pitcherALabel">A:</div>
+            <div class="pitcherSection pitcherAValue">{{currentCard.PitcherA}}</div>
+            <div class="groundOutValue">{{currentCard.GroundOutType}}</div>
+            <div class="pitcherSection sectionSide pitcherBLabel">B:</div>
+            <div class="pitcherSection pitcherBValue">{{currentCard.PitcherB}}</div>
+            <div class="rangeLabel">RANGE:</div>
+            <div class="pitcherSection sectionSide pitcherCLabel">C:</div>
+            <div class="pitcherSection pitcherCValue">{{currentCard.PitcherC}}</div>
+            <div class="rangeLeft rangeALabel">A:</div>
+            <div class="rangeRight rangeAValue">{{currentCard.RangeA}}</div>
+            <div class="pitcherSection sectionSide pitcherDLabel">D:</div>
+            <div class="pitcherSection pitcherDValue">{{currentCard.PitcherD}}</div>
+            <div class="rangeLeft rangeBLabel">B:</div>
+            <div class="rangeRight rangeBValue">{{currentCard.RangeB}}</div>
+            <div class="pitcherSection sectionSide pitcherFLabel">F:</div>
+            <div class="pitcherSection pitcherFValue">{{currentCard.PitcherF}}</div>
+            <div class="rangeLeft rangeCLabel">C:</div>
+            <div class="rangeRight rangeCValue">{{currentCard.RangeC}}</div>
+            <div class="batterSection sectionSide batterSectionLabel">Batter:</div>
+            <div class="batterSectionSpacer"></div>
+            <div class="rangeLeft rangeDLabel">D:</div>
+            <div class="rangeRight rangeDValue">{{currentCard.RangeD}}</div>
+            <div class="rangeLeft rangeFLabel">F:</div>
+            <div class="rangeRight rangeFValue">{{currentCard.RangeF}}</div>
+            <div class="batterSection sectionSide batterAPlusLabel">A+:</div>
+            <div class="batterSection batterAPlusValue">{{currentCard.BatterAPlus}}</div>
+            <div class="batterSection sectionSide batterALabel">A:</div>
+            <div class="batterSection batterAValue">{{currentCard.BatterA}}</div>
+            <div class="randomTop">Random</div>
+            <div class="randomBottom">{{Math.round(currentCard.CardNumber / 2)}}</div>
+            <div class="batterSection sectionSide batterBPlusLabel">B+:</div>
+            <div class="batterSection batterBPlusValue">{{currentCard.BatterBPlus}}</div>
+            <div class="errorLabel">ERROR:</div>
+            <div class="batterSection sectionSide batterBLabel">B:</div>
+            <div class="batterSection batterBValue">{{currentCard.BatterB}}</div>
+            <div class="errorLeft errorALabel">A:</div>
+            <div class="errorRight errorAValue">{{currentCard.ErrorA}}</div>
+            <div class="batterSection sectionSide batterCPlusLabel">C+:</div>
+            <div class="batterSection batterCPlusValue">{{currentCard.BatterCPlus}}</div>
+            <div class="errorLeft errorBLabel">B:</div>
+            <div class="errorRight errorBValue">{{currentCard.ErrorB}}</div>
+            <div class="batterSection sectionSide batterCLabel">C:</div>
+            <div class="batterSection batterCValue">{{currentCard.BatterC}}</div>
+            <div class="errorLeft errorCLabel">C:</div>
+            <div class="errorRight errorCValue">{{currentCard.ErrorC}}</div>
+            <div class="batterSection sectionSide batterDLabel">D:</div>
+            <div class="batterSection batterDValue">{{currentCard.BatterD}}</div>
+            <div class="errorLeft errorDLabel">D:</div>
+            <div class="errorRight errorDValue">{{currentCard.ErrorD}}</div>
+            <div class="batterSection sectionSide batterFLabel">F:</div>
+            <div class="batterSection batterFValue">{{currentCard.BatterF}}</div>
+            <div class="errorLeft errorFLabel">F:</div>
+            <div class="errorRight errorFValue">{{currentCard.ErrorF}}</div>
+            <div class="jumpLabel">JUMP:</div>
+            <div class="stealLabel">STEAL:</div>
+            <div class="jumpLabels jumpALabel">A:</div>
+            <div class="jumpLabels jumpBLabel">B:</div>
+            <div class="jumpLabels jumpCLabel">C:</div>
+            <div class="jumpLabels jumpDLabel">D:</div>
+            <div class="stealLabels stealALabel">A:</div>
+            <div class="stealLabels stealBLabel">B:</div>
+            <div class="stealLabels stealCLabel">C:</div>
+            <div class="stealLabels stealDLabel">D:</div>
+            <div class="jumpValues jumpAValue">{{currentCard.JumpA}}</div>
+            <div class="jumpValues jumpBValue">{{currentCard.JumpB}}</div>
+            <div class="jumpValues jumpCValue">{{currentCard.JumpC}}</div>
+            <div class="jumpValues jumpDValue">{{currentCard.JumpD}}</div>
+            <div class="stealValues stealAValue">{{currentCard.StealA}}</div>
+            <div class="stealValues stealBValue">{{currentCard.StealB}}</div>
+            <div class="stealValues stealCValue">{{currentCard.StealC}}</div>
+            <div class="stealValues stealDValue">{{currentCard.StealD}}</div>
 
-        <div class="injuryLabel">INJURY:</div>
-        <div class="durationLabel">DURATION:</div>
-        <div class="injuryValue">C</div>
-        <div class="durationALabel">A:</div>
-        <div class="durationAValue">NO</div>
-        <div class="durationBLabel">B:</div>
-        <div class="durationBValue">NO</div>
-        <div class="durationCLabel">C:</div>
-        <div class="durationCValue">NO</div>
-    </div>
-    <div class="remainingLabel">Remaining: 199</div>
-    <div class="bottomContainer">
-        <div class="buttonBar">
-            <button>Shuffle</button>
-            <button>&lt;&lt; Prev</button>
-            <button>Next &gt;&gt;</button>
+            <div class="injuryLabel">INJURY:</div>
+            <div class="durationLabel">DURATION:</div>
+            <div class="injuryValue">{{currentCard.Injury}}</div>
+            <div class="durationALabel">A:</div>
+            <div class="durationAValue">{{currentCard.InjuryA}}</div>
+            <div class="durationBLabel">B:</div>
+            <div class="durationBValue">{{currentCard.InjuryB}}</div>
+            <div class="durationCLabel">C:</div>
+            <div class="durationCValue">{{currentCard.InjuryC}}</div>
+        </div>
+        <div class="remainingLabel">Remaining: {{cardCounter()}}</div>
+        <div class="bottomContainer">
+            <div class="buttonBar">
+                <button v-on:click="shuffle">Shuffle</button>
+                <button :disabled="disablePrevious()" v-on:click="previousCard">&lt;&lt; Prev</button>
+                <button :disabled="disableNext()" v-on:click="nextCard">Next &gt;&gt;</button>
+            </div>
         </div>
     </div>
+
+    <script type="text/javascript" src="content/script.js"></script>
 </body>
 </html>
